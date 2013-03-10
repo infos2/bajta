@@ -1,0 +1,2 @@
+<?php
+die('git succesfull');
