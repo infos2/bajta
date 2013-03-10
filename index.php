@@ -1,2 +1,2 @@
 <?php
-die('git succesfull');
+die('git succesfull i kod mene');
