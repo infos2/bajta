@@ -90,18 +90,20 @@ p{
 	border-right:0px;
 }
 .page{
-	padding:200px 48px 270px 36px;
-	min-height:600px;
+	padding:200px 48px 25px 36px;
+	margin-bottom:190px;
+	display:inline-block;
 }
 #page1{
-	background:url(images/line_sep.png) no-repeat center 780px,url(images/knjiga.png) no-repeat center 660px;
+	padding-bottom:265px;
+	background:url(images/line_sep.png) no-repeat center bottom,url(images/knjiga.png) no-repeat center bottom;
 }
 #page1 p:nth-child(4){
 	text-align:right;
 }
 
 #page2{
-	background:url(images/line_sep.png) no-repeat center 1000px;
+	background:url(images/line_sep.png) no-repeat center bottom;
 }
 .usluga{
 	float:left;
@@ -120,7 +122,8 @@ p{
 	line-height:22px;
 }
 #page3{
-	background:url(images/line_sep.png) no-repeat center 900px;
+	padding-bottom:50px;
+	background:url(images/line_sep.png) no-repeat center bottom;
 }
 .klijenti{
 	margin-top:120px;
@@ -140,7 +143,8 @@ p{
 }
 
 #page4{
-	background:url(images/line_sep.png) no-repeat center 850px;
+	padding-bottom:50px;
+	background:url(images/line_sep.png) no-repeat center bottom;
 }
 #page4 div{
 	float:left;
@@ -173,6 +177,35 @@ p{
 	margin:20px 0 0 0;
 	background:url(images/logo_kontakt.png) no-repeat left center;
 	height:75px;
+}
+#page5{
+	margin-top:50px;
+	padding-top:300px;
+	padding-bottom:10px;
+	margin-bottom:50px;
+	width:877px;
+	background:url(images/linkovi_knjiga.jpg) no-repeat center top;
+}
+#page5 div{
+	margin-top:50px;
+	float:left;
+	width:380px;
+}
+#page5 .linkovi-left{
+	margin-right:80px;
+	text-align:right;
+}
+.footer{
+	background:#8f8f8f;
+	margin:0;
+	padding:2px 50px 4px 50px;
+	color:red;
+}
+.footer p{
+	color:#fff;
+}
+.footer .powered{
+	float:right;
 }
 </style>
 </head>
@@ -303,7 +336,29 @@ p{
             </div>
         </div>
     </div>
-    <div id="page5" class="page"></div>
+    <div id="page5" class="page">
+    	<h2>Linkovi</h2>
+        <div class="linkovi-left">
+            <p>www.adresa.com</p>
+            <p>www.adresa.com</p>
+            <p>www.adresa.com</p>
+            <p>www.adresa.com</p>
+            <p>www.adresa.com</p>
+        </div>
+        <div>
+            <p>www.adresa.com</p>
+            <p>www.adresa.com</p>
+            <p>www.adresa.com</p>
+            <p>www.adresa.com</p>
+            <p>www.adresa.com</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>
+            <span>Bajta d.o.o. &copy; 2013</span>
+            <span class="powered">powered by: web com</span>
+        </p>
+    </div>
 </div>
 <script>
 	$(".header") >$(" ul li").click(function(e) {
