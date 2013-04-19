@@ -183,13 +183,13 @@ p{
 	padding-top:300px;
 	padding-bottom:10px;
 	margin-bottom:50px;
-	background:url(images/linkovi_knjiga.jpg) right top  no-repeat;
-	background-size: 890px 250px ;
+	background:url(images/linkovi_knjiga.jpg) center top  no-repeat;
+	background-size: 900px 250px ;
 }
 #page5 div{
 	margin-top:50px;
 	float:left;
-	width:380px;
+	width:395px;
 }
 #page5 .linkovi-left{
 	margin-right:80px;
