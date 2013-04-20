@@ -69,6 +69,9 @@ p{
 	text-shadow:2px 2px 2px #000;
 	cursor:pointer;
 }
+.header ul li:hover{
+	text-shadow:5px 5px 5px #000;
+}
 .header ul li:first-child{
 	background:#fff url(images/logo.png) no-repeat center center;
 	width:248px;
@@ -181,10 +184,10 @@ p{
 #page5{
 	margin-top:50px;
 	padding-top:300px;
-	padding-bottom:10px;
-	margin-bottom:50px;
-	background:url(images/linkovi_knjiga.jpg) center top  no-repeat;
-	background-size: 900px 250px ;
+	padding-bottom:75px;
+	padding-right:54px;
+	margin-bottom:0;
+	background: #efefef url(images/linkovi_knjiga.png) center top  no-repeat;
 }
 #page5 div{
 	margin-top:50px;
@@ -196,13 +199,12 @@ p{
 	text-align:right;
 }
 .footer{
-	background:#8f8f8f;
+	background:#efefef;
 	margin:0;
 	padding:2px 50px 4px 50px;
 	color:red;
 }
 .footer p{
-	color:#fff;
 }
 .footer .powered{
 	float:right;
