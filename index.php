@@ -3,6 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 <title></title>
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
 <style type="text/css">
 @font-face{
 	font-family:custom;
@@ -22,6 +23,7 @@ h2{
 	padding:0 0 0 0;
 	height:28px;
 	background:url(images/shadow_uio.png) no-repeat -10px 19px;
+	text-align:left;
 }
 h2:nth-child(3){
 	text-align:right;
@@ -31,17 +33,12 @@ h2:nth-child(3){
 h3{
 	color:#636363;
 	font-size:16px;
+	text-align:left;
 }
 p{
 	font-size:15px;
 	line-height:22px;
 	color:#818080;
-}
-.holder{
-	max-width:960px;
-	margin:0 auto;
-	background:#fff url(images/gradient.png) repeat-x top center;
-	box-shadow:0 0 30px rgba(000,000,000,0.5);
 }
 .header{
 	margin:0 0 100px 0;
@@ -49,34 +46,17 @@ p{
 	padding:0;
 	height:115px;
 	position:fixed;
+	min-width:600px;
 }
 .header ul{
 	list-style:none;
-	margin:0;
+	margin:0 auto;
 	padding:0;
 	border:0;
 	outline:0;
 }
-.header ul li{
-	float:left;
-	padding:60px 0 20px 20px;
-	text-align:center;
-	width:149px;
-	border-right:3px solid #fff;
-	text-transform:uppercase;
-	color:#fff;
-	font-size:22px;
-	text-shadow:2px 2px 2px #000;
-	cursor:pointer;
-}
 .header ul li:hover{
 	text-shadow:5px 5px 5px #000;
-}
-.header ul li:first-child{
-	background:#fff url(images/logo.png) no-repeat center center;
-	width:248px;
-	min-height:110px;
-	padding:0 0 0 20px;
 }
 .header ul li:nth-child(2){
 	background:url(images/menu/usluge.png) no-repeat top center;
@@ -87,16 +67,7 @@ p{
 .header ul li:nth-child(4){
 	background:url(images/menu/kontakt.png) no-repeat top center;
 }
-.header ul li:nth-child(5){
-	background:url(images/menu/linkovi.png) no-repeat top center;
-	width:153px;
-	border-right:0px;
-}
-.page{
-	padding:200px 48px 25px 36px;
-	margin-bottom:190px;
-	display:inline-block;
-}
+
 #page1{
 	padding-bottom:265px;
 	background:url(images/line_sep.png) no-repeat center bottom,url(images/knjiga.png) no-repeat center bottom;
@@ -127,9 +98,6 @@ p{
 #page3{
 	padding-bottom:50px;
 	background:url(images/line_sep.png) no-repeat center bottom;
-}
-.klijenti{
-	margin-top:120px;
 }
 .klijenti p{
 	float:left;
@@ -188,15 +156,6 @@ p{
 	padding-right:54px;
 	margin-bottom:0;
 	background: #efefef url(images/linkovi_knjiga.png) center top  no-repeat;
-}
-#page5 div{
-	margin-top:50px;
-	float:left;
-	width:395px;
-}
-#page5 .linkovi-left{
-	margin-right:80px;
-	text-align:right;
 }
 .footer{
 	background:#efefef;
