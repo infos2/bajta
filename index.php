@@ -56,7 +56,7 @@ p{
 	outline:0;
 }
 .header ul li:hover{
-	text-shadow:5px 5px 5px #000;
+	color:rgba(255,255,255,1);
 }
 .header ul li:nth-child(2){
 	background:url(images/menu/usluge.png) no-repeat top center;
@@ -67,7 +67,6 @@ p{
 .header ul li:nth-child(4){
 	background:url(images/menu/kontakt.png) no-repeat top center;
 }
-
 #page1{
 	padding-bottom:265px;
 	background:url(images/line_sep.png) no-repeat center bottom,url(images/knjiga.png) no-repeat center bottom;
@@ -137,6 +136,8 @@ p{
 	font-size:16px;
 	font-weight:bold;
 	margin-right:10px;
+	min-width:50px;
+	display:inline-block;
 }
 .lokacija{
 	margin-top:0px;
@@ -174,7 +175,7 @@ p{
 <div class="holder">
 	<div class="header">
     <ul>
-        <li></li>
+        <li>Bajta O nama</li>
 	    <li>Usluge</li>
     	<li>Klijenti</li>
         <li>Kontakt</li>

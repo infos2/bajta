@@ -153,12 +153,14 @@
 		font-size:22px;
 		text-shadow:2px 2px 2px #000;
 		cursor:pointer;
+		color:rgba(255,255,255,0.8);
 	}
 	.header ul li:first-child{
 		background:#fff url(../images/logo.png) no-repeat center center;
 		width:248px;
 		min-height:110px;
 		padding:0 0 0 20px;
+		font-size:0px;
 	}
 	.header ul li:nth-child(5){
 		background:url(../images/menu/linkovi.png) no-repeat top center;
