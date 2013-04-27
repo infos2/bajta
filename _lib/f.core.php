@@ -48,24 +48,20 @@ function print_variable($var,$lvl=0){
 	elseif (is_array($var)) return 'Array['.count($var).']{<br/>'.print_array($var,$lvl+1).str_repeat('&nbsp;',$lvl*5).'}<br/>';
 	else {
 		if (is_string($var)) return 'string('.strlen($var).')"'.$var.'"<br/>';
-		elseif(is_bool($var)) return gettype($var).'('.($var==1 ? 'true' : ' false').')<br/>';
+		elseif(is_bool($var)) return gettype($var).'('.($var==1 ? 'true' : 'false').')<br/>';
 		elseif(is_scalar($var)) return gettype($var).'('.$var.')<br/>';
 		else return gettype($var).'<br/>';
 	}
 }
 
 function print_array($array,$lvl){
-	foreach ($array as $key => $value) {
-		$print.= str_repeat('&nbsp;',$lvl*5).'['.$key.']=>'.print_variable($value,$lvl);
-	}
+	foreach ($array as $key => $value) $print.= str_repeat('&nbsp;',$lvl*5).'['.$key.']=>'.print_variable($value,$lvl);
 	return $print;
 }
 
 function print_object($object,$lvl){
 	$vars = get_object_vars($object);
-	foreach ($vars as $key => $value){
-		$print.= str_repeat('&nbsp;',$lvl*5).'['.$key.']=>'.print_variable($value,$lvl);
-	}
+	foreach ($vars as $key => $value) $print.= str_repeat('&nbsp;',$lvl*5).'['.$key.']=>'.print_variable($value,$lvl);
 	return $print;
 }
 
