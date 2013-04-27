@@ -43,10 +43,13 @@ require 'f.user.php';
 /* GLOBALS */
 $protocol = !empty($_SERVER['HTTPS']) ? 'https' : 'http';
 $live_site = $protocol.'://'.$_SERVER['HTTP_HOST'].'/';
-$sitepath = $_SERVER['DOCUMENT_ROOT'].'/';
+$sitepath = $_SERVER['DOCUMENT_ROOT'];
 forceWWW();
 
-$get = (object)$_GET;
-$post = (object)$_POST;
+$get = (object)$_GET; $get->isEmpty = count(get_object_vars($get))>0 ? false : true;
+$post = (object)$_POST; $post->isEmpty = count(get_object_vars($post))>0 ? false : true;
 $session = (object)$_SESSION;
 class object{}
+
+/* SET HEADERS */
+header('Content-Type: text/html; charset=utf-8');
