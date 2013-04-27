@@ -54,13 +54,24 @@ DROP TABLE IF EXISTS `racbajhr_db`.`bajta13_stranice` ;
 
 CREATE  TABLE IF NOT EXISTS `racbajhr_db`.`bajta13_stranice` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
+  PRIMARY KEY (`id`) )
+ENGINE = MyISAM;
+
+
+-- -----------------------------------------------------
+-- Table `racbajhr_db`.`bajta13_sadrzaj`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `racbajhr_db`.`bajta13_sadrzaj` ;
+
+CREATE  TABLE IF NOT EXISTS `racbajhr_db`.`bajta13_sadrzaj` (
+  `id_stranice` INT UNSIGNED NOT NULL ,
   `ln` CHAR(2) NOT NULL ,
   `naslov` VARCHAR(90) NOT NULL ,
   `sadrzaj` VARCHAR(3000) NULL ,
   `url` VARCHAR(90) NOT NULL ,
-  PRIMARY KEY (`id`) ,
-  INDEX `fk_bajta13_stranice_bajta13_jezici1_idx` (`ln` ASC) ,
-  UNIQUE INDEX `url_UNIQUE` (`url` ASC) )
+  INDEX `fk_bajta13_sadrzaj_bajta13_stranice1_idx` (`id_stranice` ASC) ,
+  INDEX `fk_bajta13_sadrzaj_bajta13_jezici1_idx` (`ln` ASC) ,
+  PRIMARY KEY (`ln`, `url`) )
 ENGINE = MyISAM;
 
 USE `racbajhr_db` ;
@@ -92,11 +103,10 @@ INSERT INTO `racbajhr_db`.`bajta13_jezici` (`ln`, `jezik`) VALUES ('ru', 'Pус�
 
 COMMIT;
 
---
--- Dumping data for table `bajta13_korisnici`
---
+-- -----------------------------------------------------
+-- Data for table `racbajhr_db`.`bajta13_korisnici`
+-- -----------------------------------------------------
 
-INSERT INTO `racbajhr_db`.`bajta13_korisnici` (`id`, `tip`, `ime`, `prezime`, `lozinka`, `email`, `aktivan`) VALUES
-(1, 1, 'Vanja', 'Retkovac', '52fc7ac1e1bc7997f6b6599be6a10fbf91671992', 'vanja.retkovac@gmail.com', 1),
-(2, 1, 'Luka', 'Bracanović', '52fc7ac1e1bc7997f6b6599be6a10fbf91671992', 'luka.bracanovic@web-com.hr', 1),
-(3, 1, 'Igor', 'Ćapara', '52fc7ac1e1bc7997f6b6599be6a10fbf91671992', 'icapara@gmail.com', 0);
+INSERT INTO `bajta13_korisnici` (`id`, `tip`, `ime`, `prezime`, `lozinka`, `email`, `aktivan`) VALUES(1, 1, 'Vanja', 'Retkovac', '52fc7ac1e1bc7997f6b6599be6a10fbf91671992', 'vanja.retkovac@gmail.com', 1);
+INSERT INTO `bajta13_korisnici` (`id`, `tip`, `ime`, `prezime`, `lozinka`, `email`, `aktivan`) VALUES(2, 1, 'Luka', 'Bracanović', '52fc7ac1e1bc7997f6b6599be6a10fbf91671992', 'luka.bracanovic@web-com.hr', 1);
+INSERT INTO `bajta13_korisnici` (`id`, `tip`, `ime`, `prezime`, `lozinka`, `email`, `aktivan`) VALUES(3, 1, 'Igor', 'Ćapara', '52fc7ac1e1bc7997f6b6599be6a10fbf91671992', 'icapara@gmail.com', 0);

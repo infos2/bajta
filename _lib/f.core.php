@@ -29,7 +29,7 @@ function switchSSL($ssl_on){
 function forceWWW(){
 	global $live_site,$protocol;
 	if (TESTSERVER) return false;
-	if (strpos($live_site,$protocol.'://www.')) return false;
+	if (strpos($live_site,'://www.')) return false;
 	$www_livesite = str_replace($protocol.'://',$protocol.'://www.',$live_site);
 	// 301 Redirect
 	header('HTTP/1.1 301 Moved Permanently');
