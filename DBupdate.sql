@@ -102,3 +102,11 @@ INSERT INTO `racbajhr_db`.`bajta13_jezici` (`ln`, `jezik`) VALUES ('en', 'Englis
 INSERT INTO `racbajhr_db`.`bajta13_jezici` (`ln`, `jezik`) VALUES ('ru', 'Pусский');
 
 COMMIT;
+
+-- -----------------------------------------------------
+-- Data for table `racbajhr_db`.`bajta13_korisnici`
+-- -----------------------------------------------------
+
+INSERT INTO `bajta13_korisnici` (`id`, `tip`, `ime`, `prezime`, `lozinka`, `email`, `aktivan`) VALUES(1, 1, 'Vanja', 'Retkovac', '52fc7ac1e1bc7997f6b6599be6a10fbf91671992', 'vanja.retkovac@gmail.com', 1);
+INSERT INTO `bajta13_korisnici` (`id`, `tip`, `ime`, `prezime`, `lozinka`, `email`, `aktivan`) VALUES(2, 1, 'Luka', 'Bracanović', '52fc7ac1e1bc7997f6b6599be6a10fbf91671992', 'luka.bracanovic@web-com.hr', 1);
+INSERT INTO `bajta13_korisnici` (`id`, `tip`, `ime`, `prezime`, `lozinka`, `email`, `aktivan`) VALUES(3, 1, 'Igor', 'Ćapara', '52fc7ac1e1bc7997f6b6599be6a10fbf91671992', 'icapara@gmail.com', 0);
