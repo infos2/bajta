@@ -21,8 +21,8 @@ $req_mod = !empty($module) ? '_'.$module : false;
 $req_fpt = $req_tab.$req_mod.'.php'; #TODO
 
 /* TAB-MODULE-ACTION display LOGIC */
-if ($action or !empty($post)) file_exists($sitepath.'admin/logic/'.$req_fpt) ? require 'logic/'.$req_fpt : die('Pogreska logike');
-file_exists($sitepath.'admin/tabs/'.$req_fpt) ? require 'tabs/'.$req_fpt : die('Pogreska sustava');
+#if ($action or !empty($post)) file_exists($sitepath.'admin/logic/'.$req_fpt) ? require 'logic/'.$req_fpt : die('Pogreska logike');
+#file_exists($sitepath.'admin/tabs/'.$req_fpt) ? require 'tabs/'.$req_fpt : die('Pogreska sustava');
 
 $PART->live_site = $live_site;
 $PART->user_name = $user->ime;
