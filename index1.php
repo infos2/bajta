@@ -308,6 +308,7 @@ p{
             <p>www.adresa.com</p>
         </div>
     </div>
+    <input type="button" value="aa" onClick="alert(y);" style="position:fixed;left:0;top:0;">
     <div class="footer">
         <p>
             <span>Bajta d.o.o. &copy; 2013</span>
@@ -318,6 +319,7 @@ p{
 <script>
 var h=$("body").css("height").replace(/[^-\d\.]/g, '');
 var x;
+var y;
 	$(".header") >$(" ul li").click(function(e) {
 		x=$(this).index() + 1;
 		$('body').animate({
@@ -327,10 +329,11 @@ var x;
 	 $(window).resize(function() {
 		 n=$("body").css("height").replace(/[^-\d\.]/g, '');
 		 if(n!=h){
-			$('body').animate({
-			 scrollTop: $("#page"+x).offset().top
-			 }, 0);
+			//$('body').animate({scrollTop: $("#page"+x).offset().top	}, 0);
+			 $(window).scrollTop(y);
 			 h=n;
+		 }else{
+			y=$(window).scrollTop();	 
 		 }
 	});
 </script>
