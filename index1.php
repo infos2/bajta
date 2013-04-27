@@ -3,7 +3,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
 <title></title>
-<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/responsive1.css">
 <style type="text/css">
 @font-face{
 	font-family:custom;
@@ -47,7 +47,6 @@ p{
 	padding:0;
 	height:115px;
 	position:fixed;
-	min-width:600px;
 }
 .header ul{
 	list-style:none;
@@ -55,18 +54,11 @@ p{
 	padding:0;
 	border:0;
 	outline:0;
+	max-width:960px;
+	width:100%;
 }
 .header ul li:hover{
 	color:rgba(255,255,255,1);
-}
-.header ul li:nth-child(2){
-	background:url(images/menu/usluge.png) no-repeat top center;
-}
-.header ul li:nth-child(3){
-	background:url(images/menu/klijenti.png) no-repeat top center;
-}
-.header ul li:nth-child(4){
-	background:url(images/menu/kontakt.png) no-repeat top center;
 }
 #page1{
 	padding-bottom:265px;
@@ -176,7 +168,7 @@ p{
 <div class="holder">
 	<div class="header">
     <ul>
-        <li>Bajta O nama</li>
+        <li>Bajta</li>
 	    <li>Usluge</li>
     	<li>Klijenti</li>
         <li>Kontakt</li>
@@ -324,12 +316,23 @@ p{
     </div>
 </div>
 <script>
+var h=$("body").css("height").replace(/[^-\d\.]/g, '');
+var x;
 	$(".header") >$(" ul li").click(function(e) {
 		x=$(this).index() + 1;
 		$('body').animate({
 		 scrollTop: $("#page"+x).offset().top
 		 }, 800);
 	 });
+	 $(window).resize(function() {
+		 n=$("body").css("height").replace(/[^-\d\.]/g, '');
+		 if(n!=h){
+			$('body').animate({
+			 scrollTop: $("#page"+x).offset().top
+			 }, 0);
+			 h=n;
+		 }
+	});
 </script>
 </body>
 </html>

@@ -41,12 +41,15 @@
 		font-size:22px;
 		text-shadow:2px 2px 2px #000;
 		cursor:pointer;
+		color:rgba(255,255,255,0.8);
+
 	}
 	.header ul li:first-child{
 		background:#fff url(../images/logo_kontakt.png) no-repeat center center;
 		width:103px;
 		min-height:110px;
 		padding:0 0 0 20px;
+		font-size:0px;
 	}
 	.header ul li:nth-child(5){
 		background:url(../images/menu/linkovi.png) no-repeat top center;
@@ -99,12 +102,15 @@
 		font-size:22px;
 		text-shadow:2px 2px 2px #000;
 		cursor:pointer;
+		color:rgba(255,255,255,0.8);
+
 	}
 	.header ul li:first-child{
 		background:#fff url(../images/logo.png) no-repeat center center;
 		width:188px;
 		min-height:110px;
 		padding:0 0 0 20px;
+		font-size:0px;
 	}
 	.header ul li:nth-child(5){
 		background:url(../images/menu/linkovi.png) no-repeat top center;
@@ -112,15 +118,17 @@
 		border-right:0px;
 	}
 	#page5 div{
-		margin-top:50px;
 		width:670px;
+		text-align:center;
+		margin-top:50px;
 	}
 	#page5 div p{
 		font-size:18px;
 		margin:5px 0;
 	}
 	#page5 .linkovi-left{
-		text-align:right;
+		float:left;
+		margin-bottom:50px;
 	}
 
 }
