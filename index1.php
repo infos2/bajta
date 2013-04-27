@@ -330,7 +330,7 @@ var y;
 		 n=$("body").css("height").replace(/[^-\d\.]/g, '');
 		 if(n!=h){
 			//$('body').animate({scrollTop: $("#page"+x).offset().top	}, 0);
-			 $(window).scrollTop(y);
+			 //$(window).scrollTop(y);
 			 h=n;
 		 }else{
 			y=$(window).scrollTop();	 

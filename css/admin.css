@@ -2,7 +2,7 @@
 body{
 	font-family:sans-serif,Arial;
 	font-size:12px;
-	background:url(/spark/images/bg.jpg);
+	background:url(../images/admin/bg.jpg);
 }
 a{
 	text-decoration:none;
@@ -138,7 +138,7 @@ h2{
 	height:105px;
 	padding:20px 10px 15px 15px;
 	background-color:rgba(000, 000, 000,0.4);
-	background-image:url(/spark/images/elementi/dekor.png);
+	background-image:url(../images/admin/elementi/dekor.png);
 	background-position:right;
 	background-repeat:no-repeat;
 	border-radius:0 0 5px 5px;
@@ -324,11 +324,11 @@ h2{
     width: 20px;
     height: 20px;
     display: block;
-    background:url(/spark/images/elementi/check_box.png) center center no-repeat;
+    background:url(../images/admin/elementi/check_box.png) center center no-repeat;
 }
 
 .myCheckbox input:checked + span {
-    background:url(/spark/images/elementi/checked_box.png) center center no-repeat;
+    background:url(../images/admin/elementi/checked_box.png) center center no-repeat;
 }
 #editor-form{
 	
@@ -375,7 +375,7 @@ h2{
 .login{
 	width:800px;
 	padding-top:300px;
-	background:url(/spark/images/lokot.png) center top no-repeat;
+	background:url(../images/admin/lokot.png) center top no-repeat;
 	margin:50px auto;
 	text-align:center;
 }
@@ -399,7 +399,7 @@ h2{
 }
 .login form input[type="submit"]{
 	position:absolute;
-	background:url(/spark/images/elementi/login_arrow.png) center center no-repeat;
+	background:url(../images/admin/elementi/login_arrow.png) center center no-repeat;
 	background-color:#fec940;
 	border-radius:7px;
 	height:77px;
@@ -439,7 +439,7 @@ h2{
 	margin:0 1px;
 }
 .loading{
-	background:#fff url(../images/loading.gif) no-repeat center center;
+	background:#fff url(../images/admin/loading.gif) no-repeat center center;
 	width:170px;
 	height:30px;
 	border:1px solid #999;
