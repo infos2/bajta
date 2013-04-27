@@ -8,12 +8,15 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="{LIVE_SITE}plugins/ckeditor/ckeditor.js"></script>
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
 <script>
+window.onbeforeunload = function() {
+	if(edited==1) return false;
+}
 $(function() {
 $( "#tabs" ).tabs();
 });
+var edited=0;
 </script>
 </head>
 <body>
@@ -54,7 +57,7 @@ $( "#tabs" ).tabs();
                 <label for="editor1">
                 Naslov:
                 </label>
-                <input type="text" placeholder="Naslov" size="40">
+                <input type="text" placeholder="Naslov" size="40" onKeyPress="edited=1" onChange="edited=1" onPaste="edited=1" oninput="edited=1">
             </p>
             <p>
                 <label for="editor1">
@@ -96,7 +99,8 @@ $( "#tabs" ).tabs();
         </div>
     </div>            
         <p>
-            <input type="submit" value="Submit">
+            <button class="btn btn-primary" type="submit">Spremi</button>
+            <button class="btn" type="button">Odustani</button>
         </p>
 	</form>
     <div class="pagination">
