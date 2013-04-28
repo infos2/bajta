@@ -17,7 +17,7 @@ $PART = new TemplateParts();
 /* TAB-MODULE set LOGIC */
 $module = !empty($get->m) ? $get->m : null;
 $action = !empty($get->a) ? $get->a : null;
-$req_tab = $tab = !empty($get->t) ? $get->t : 'stranice'; #default
+$req_tab = $tab = !empty($get->t) ? $get->t : 'stranice'; #NOTE default
 $req_mod = !empty($module) ? '_'.$module : null;
 $req_fpt = $req_tab.$req_mod.'.php';
 
@@ -26,6 +26,7 @@ if ($action or !$post->isEmpty) file_exists($sitepath.'spark/logic/'.$req_fpt) ?
 file_exists($sitepath.'spark/tabs/'.$req_fpt) ? require 'tabs/'.$req_fpt : die('Pogreska sustava');
 
 $PART->live_site = $live_site;
+$PART->navigation = navigation();
 $PART->user_name = $user->ime;
 /* other HTML template chunks*/
 

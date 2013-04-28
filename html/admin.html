@@ -1,116 +1,48 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<title>Spark</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
 <link rel="icon" href="images/favicon.ico.png" type="image/jpg"/>
 <link rel="stylesheet" href="/css/admin.css" type="text/css" />
-<title>Spark</title>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="{LIVE_SITE}plugins/ckeditor/ckeditor.js"></script>
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
-<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
-<script>
-window.onbeforeunload = function() {
-	if(edited==1) return false;
-}
-$(function() {
-$( "#tabs" ).tabs();
-});
-var edited=0;
-</script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
 </head>
 <body>
 <div class="main">
 	<div style="text-align:center;padding:15px 0;"><img src="/images/admin/elementi/logo.png"/></div>
 	<ul class="menu">
-	<a href="?module=home"><li >O nama</li></a>
-    <a href="?module=news"><li >Usluge</li></a>
-    <a href="?module=about"><li >Klijenti</li></a>
-    <a href="?module=kategorije"><li>Kontakt</li></a>
-    <a href="?module=postavke"><li>Linkovi</li></a>
+	<li><a href="?module=home">O nama</a></li>
+    <li><a href="?module=news">Usluge</a></li>
+    <li><a href="?module=about">Klijenti</a></li>
+    <li><a href="?module=kategorije">Kontakt</a></li>
+    <li><a href="?module=postavke">Linkovi</a></li>
+    <li>
         <div class="menu-right" style="padding:4px 10px;">
             <span style="float:right;padding:5px 10px;">
-                <a href="{endx,SITE}" style="margin-right:10px;" target="_new"><img src="/images/admin/elementi/view.png" /> View site </a>
-                <a href="?logout=1"><img src="/images/admin/elementi/log_out.png" /> Log out</a>
+                <a href="{LIVE_SITE}" style="margin-right:10px;" target="_blank"><img src="/images/admin/elementi/view.png" />View site</a>
+                <a href="?logout=1"><img src="/images/admin/elementi/log_out.png" />Log out</a>
             </span>
         </div>
+    </li>
     </ul>
     <!-- *********/HEADER/********* --> 
     <div class="top">
-		{endx,INTRO}
         <div style="float:right;height:50px;">
-           <ul class="action">
-           {endx,ACTIONS}
-           </ul>
+           {NAVIGATION}
         </div>
     </div>
     <div class="content">
-	<form action="" method="post">
-    <div id="tabs">
-        <ul>
-        <li><a href="#tabs-1">LANG1</a></li>
-        <li><a href="#tabs-2">LANG2</a></li>
-        <li><a href="#tabs-3">LANG3</a></li>
-        </ul>
-        <div id="tabs-1">
-            <p>
-                <label for="editor1">
-                Naslov:
-                </label>
-                <input type="text" placeholder="Naslov" size="40" onKeyPress="edited=1" onChange="edited=1" onPaste="edited=1" oninput="edited=1">
-            </p>
-            <p>
-                <label for="editor1">
-                Editor 1:
-                </label>
-                <textarea class="ckeditor" cols="80" id="editor1" name="editor1" rows="10">
-                </textarea>
-            </p>
-        </div>
-        <div id="tabs-2">
-            <p>
-                <label for="editor1">
-                Naslov:
-                </label>
-                <input type="text" placeholder="Naslov" size="40">
-            </p>
-            <p>
-                <label for="editor1">
-                Editor 2:
-                </label>
-                <textarea class="ckeditor" cols="80" id="editor1" name="editor1" rows="10">
-                </textarea>
-            </p>
-        </div>
-        <div id="tabs-3">
-            <p>
-                <label for="editor1">
-                Naslov:
-                </label>
-                <input type="text" placeholder="Naslov" size="40">
-            </p>
-            <p>
-                <label for="editor1">
-                Editor 3:
-                </label>
-                <textarea class="ckeditor" cols="80" id="editor1" name="editor1" rows="10">
-                </textarea>
-            </p>
-        </div>
-    </div>            
-        <p>
-            <button class="btn btn-primary" type="submit">Spremi</button>
-            <button class="btn" type="button">Odustani</button>
-        </p>
-	</form>
-    <div class="pagination">
-    {endx,PAGINATION}
-    </div>
-   </div>
+    {CONTENT}
+  	</div>
     <!-- *********/CONTENT/********* -->
     <div class="footer">
-        <span>powered by: <a href="http://www.web-com.hr">www.web-com.hr</a></span>
+        <span><a href="http://www.web-com.hr">Web-Com.hr</a></span>
     </div>
 </div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="//code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+<script src="{LIVE_SITE}plugins/ckeditor/ckeditor.js"></script>
+<script src="../js/admin.js"></script>
 </body>
 </html>

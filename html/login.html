@@ -1,23 +1,21 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" class="login_view">
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>{TITLE}</title>
-<meta name="title" content="{TITLE}"/>
+<meta name="title" content="{TITLE}" />
 
-<link type="text/css" rel="stylesheet" href="{LIVE_SITE}css/reset.css"/>
-<link type="text/css" rel="stylesheet" href="{LIVE_SITE}css/login.css"/>
+<link type="text/css" rel="stylesheet" href="{LIVE_SITE}css/reset.css" />
+<link type="text/css" rel="stylesheet" href="{LIVE_SITE}css/login.css" />
 
 </head>
 
-<body>
+<body class="login_view">
 	<div id="page_wrapper">
 		<div id="wrapper">
-
 			<header>
 				<h1>{PROJECT_NAME}</h1>
 			</header>
-
 			<form action="" method="post">
 				<h2 class="title">Login to {PROJECT_NAME} admin</h2>
 				{ERROR}
@@ -25,11 +23,11 @@
 					<input class="text" type="text" name="email" placeholder="Email" />
 				</div>
 				<div class="field">
-					<input class="text" type="password" name="pass"  placeholder="Password" />
+					<input class="text" type="password" name="pass" placeholder="Password" />
 				</div>
 				<button class="n_btn btn_action">Login</button>
 			</form>
-	            <img src="/images/logo.png">
+			<img src="/images/logo.png">
 		</div>
 	</div>
 </body>

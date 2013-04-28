@@ -1,3 +1,44 @@
-body {font-family: Helvetica,Arial; font-size:14px; color:#fff; background-color:#fff;}
-a {color:#303030; text-decoration:none;}
-a:hover {color:#303030;}
+@CHARSET "UTF-8";
+@font-face {font-family: custom; src: url(css/CONSTAN_0.TTF);}
+
+body {background: url(images/pozadina.jpg); margin: 0; padding: 0; font-family: custom; background-attachment: fixed;}
+h2 {font-family: custom; text-transform: uppercase; color: #646464; margin: 0 0 40px 0; padding: 0 0 0 0; height: 28px; background: url(images/shadow_uio.png) no-repeat -10px 19px; text-align: left;}
+h2:nth-child(3) {text-align: right; background: url(images/shadow_zasto.png) no-repeat 580px 20px; margin-top: 55px;}
+h3 {color: #636363; font-size: 16px; text-align: left;}
+p {font-size: 15px; line-height: 22px; color: #818080;}
+
+/* HEADER */
+#header {margin: 0 0 100px 0; background: #fff url(images/line_sep.png) no-repeat bottom center; padding: 0; height: 115px; position: fixed; min-width: 600px;}
+#header ul {list-style: none; margin: 0 auto; padding: 0; border: 0; outline: 0;}
+#header ul li:hover {color: rgba(255, 255, 255, 1);}
+#header ul li:nth-child(2) {background: url(images/menu/usluge.png) no-repeat top center;}
+#header ul li:nth-child(3) {background: url(images/menu/klijenti.png) no-repeat top center;}
+#header ul li:nth-child(4) {background: url(images/menu/kontakt.png) no-repeat top center;}
+
+/* CONTENT */
+#page1 {padding-bottom: 265px; background: url(images/line_sep.png) no-repeat center bottom, url(images/knjiga.png) no-repeat center bottom;}
+#page1 p:nth-child(4) {text-align: right;}
+
+#page2 {background: url(images/line_sep.png) no-repeat center bottom;}
+.usluga {float: left; min-width: 400px; max-width: 400px; margin: 10px 0; min-height: 200px;}
+.usluga:nth-child(even) {margin-right: 40px;}
+.usluga ul {color: #7a7a7a; list-style: dot; font-size: 14px; line-height: 22px;}
+
+#page3 {padding-bottom: 50px; background: url(images/line_sep.png) no-repeat center bottom;}
+.klijenti p {float: left; max-width: 420px; min-width: 420px; text-align: left; font-size: 18px; line-height: 20px; margin: 20px 0 0 0; color: #6d6c6c;}
+.klijneti p:nth-child(even) {margin-right: 20px;}
+
+#page4 {padding-bottom: 50px; background: url(images/line_sep.png) no-repeat center bottom;}
+#page4 div {float: left; min-width: 400px;}
+#page4 div:nth-child(even) {margin: 0 0 0 25px; padding-top: 10px;}
+#page4 div .karta {float: none; border: 1px solid #c6c6c6; padding: 5px 5px 5px 5px; min-width: 396px; margin: 0;}
+#page4 span {color: #434343; font-size: 16px; font-weight: bold; margin-right: 10px; min-width: 50px; display: inline-block;}
+.lokacija {margin-top: 0px; margin-bottom: 5px; font-size: 18px;}
+#page4 div .logo {padding: 0; margin: 20px 0 0 0; background: url(images/logo_kontakt.png) no-repeat left center; height: 75px;}
+
+#page5 {margin-top: 50px; padding-top: 300px; padding-bottom: 75px; padding-right: 54px; margin-bottom: 0; background: #efefef url(images/linkovi_knjiga.png) center top no-repeat;}
+
+/* FOOTER */
+#footer {background: #efefef; margin: 0; padding: 2px 50px 4px 50px; color: red;}
+#footer p {}
+#footer .powered {float: right;}

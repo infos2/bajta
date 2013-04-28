@@ -134,7 +134,7 @@ h2{
 .menu-right a{
 	font-size:11px;
 }
-.header{
+#header{
 	height:105px;
 	padding:20px 10px 15px 15px;
 	background-color:rgba(000, 000, 000,0.4);
@@ -143,12 +143,12 @@ h2{
 	background-repeat:no-repeat;
 	border-radius:0 0 5px 5px;
 }
-.header h2{
+#header h2{
 	color:#fff;
 	padding:0px;
 	font-family:arial;
 }
-.header p{
+#header p{
 	width:550px;
 	text-align:justify;
 	color:#fff;

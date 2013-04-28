@@ -41,14 +41,14 @@ p{
 	line-height:22px;
 	color:#818080;
 }
-.header{
+#header{
 	margin:0 0 100px 0;
 	background:#fff url(images/line_sep.png) no-repeat bottom center;
 	padding:0;
 	height:115px;
 	position:fixed;
 }
-.header ul{
+#header ul{
 	list-style:none;
 	margin:0 auto;
 	padding:0;
@@ -57,7 +57,7 @@ p{
 	max-width:960px;
 	width:100%;
 }
-.header ul li:hover{
+#header ul li:hover{
 	color:rgba(255,255,255,1);
 }
 #page1{
@@ -165,8 +165,8 @@ p{
 </style>
 </head>
 <body>
-<div class="holder">
-	<div class="header">
+<div id="holder">
+	<div id="header">
     <ul>
         <li>Bajta</li>
 	    <li>Usluge</li>
@@ -192,53 +192,44 @@ p{
         <h2>Usluge</h2>
         <div class="usluga">
             <h3>Vođenje poslovnih knjiga</h3>
-            <p>
-				<ul>
-                    <li>dnevnik i glavna knjiga financijskog knjigovodstva</li>
-                    <li>knjige ulaznih (U-RA) i izlaznih (I-RA) računa</li>
-                    <li>knjiga osnovnih sredstava (evidencije nematerijalne i materijalne imovine)</li>
-                    <li>knjiga blagajne</li>
-                </ul>
-            </p>
+			<ul>
+	            <li>dnevnik i glavna knjiga financijskog knjigovodstva</li>
+	            <li>knjige ulaznih (U-RA) i izlaznih (I-RA) računa</li>
+	            <li>knjiga osnovnih sredstava (evidencije nematerijalne i materijalne imovine)</li>
+	            <li>knjiga blagajne</li>
+			</ul>
         </div>
         <div class="usluga">
             <h3>Vođenje poslovnih knjiga</h3>
-            <p>
-				<ul>
-                    <li>mjesečni/kvartalni obračun poreza na dodanu vrijednost (PDV)</li>
-                    <li>godišnji obračun poreza na dodanu vrijednost (PDV-K)</li>
-                    <li>obračun kamata, tečajnih razlika i amortizacije osnovnih sredstava</li>
-                    <li>obračun putnih naloga</li>
-                </ul>
-            </p>
+			<ul>
+                <li>mjesečni/kvartalni obračun poreza na dodanu vrijednost (PDV)</li>
+                <li>godišnji obračun poreza na dodanu vrijednost (PDV-K)</li>
+                <li>obračun kamata, tečajnih razlika i amortizacije osnovnih sredstava</li>
+            	<li>obračun putnih naloga</li>
+            </ul>
         </div>
         <div class="usluga">
             <h3>Vođenje poslovnih knjiga</h3>
-            <p>
 				<ul>
                     <li>obračun plaće , ugovora o djelu i autorskih naknada</li>
-                    <li>priprema obrazaca uz plaću <br>
-                       - R-Sm za FINU (REGOS)<br>
+                    <li>priprema obrazaca uz plaću <br/>
+                       - R-Sm za FINU (REGOS)<br/>
                        - ID, IPP za Poreznu Upravu
                     </li>
                     <li>priprema ostalih obrazaca vezanih uz dohodak: IDD, IP, IDD-1</li>
                 </ul>
-            </p>
         </div>
         <div class="usluga">
             <h3>Vođenje poslovnih knjiga</h3>
-            <p>
 				<ul>
                     <li>račun dobiti i gubitka (RDG), bilanca (BIL) i bilješke uz financijske izvještaje</li>
                     <li>tromjesečni statistički izvještaj (TSI-POD)</li>
                     <li>godišnji financijski izvještaj (GFI-POD) za statistiku i javnu objavu</li>
                     <li>prijava poreza na dobit (PD)</li>
                 </ul>
-            </p>
         </div>
         <div class="usluga">
             <h3>Vođenje poslovnih knjiga</h3>
-            <p>
 				<ul>
                     <li>praćenje stanja obveza za javna davanja prema Poreznoj Upravi</li>
                     <li>saldakonti kupaca i dobavljača</li>
@@ -247,14 +238,13 @@ p{
                     <li>izvještavanje HNB-u o poslovima s inozemstvom</li>
                     <li>priprema ostalih izvještaja prema željama i potrebama klijenta</li>
                 </ul>
-            </p>
         </div>
     </div>
     <div id="page3" class="page">
     	<h2>Klijenti</h2>
         <p>
-            Nudimo kompletnu uslugu knjigovodstva i računovodstva za poduzeća, obrte (standardne obrtnike i umjetnike) i udruge.<br>
-            Redovitim praćenjem zakonskih i poreznih propisa te hrvatskih i međunarodnih računovodstvenih standarda u <br>
+            Nudimo kompletnu uslugu knjigovodstva i računovodstva za poduzeća, obrte (standardne obrtnike i umjetnike) i udruge.<br/>
+            Redovitim praćenjem zakonskih i poreznih propisa te hrvatskih i međunarodnih računovodstvenih standarda u <br/>
             mogućnosti smo pružiti stručan i profesionalan pristup.
         </p>
         <div class="klijenti">
@@ -286,8 +276,8 @@ p{
         </div>
         <div>
 			<p class="lokacija">Pula, Croatia</p>
-        	<div class="karta">	
-                <iframe width="396" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=+Posavski+Ljudevita+2,+Pula&amp;aq=&amp;sll=44.881418,13.860626&amp;sspn=0.10497,0.209255&amp;ie=UTF8&amp;hq=&amp;hnear=Ulica+Ljudevita+Posavskog+2,+52100,+Pula,+Istarska+%C5%BEupanija,+Croatia&amp;t=m&amp;ll=44.860736,13.832817&amp;spn=0.097342,0.135612&amp;z=12&amp;iwloc=A&amp;output=embed"></iframe>
+        	<div class="karta">
+        		<!-- TODO Napravit ćemo kartu kao div ne kao iframe -->
             </div>
         </div>
     </div>
@@ -318,7 +308,7 @@ p{
 <script>
 var h=$("body").css("height").replace(/[^-\d\.]/g, '');
 var x=1;
-	$(".header") >$(" ul li").click(function(e) {
+	$("#header") >$(" ul li").click(function(e) {
 		x=$(this).index() + 1;
 		$('body').animate({
 		 scrollTop: $("#page"+x).offset().top
