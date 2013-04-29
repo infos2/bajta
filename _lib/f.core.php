@@ -4,6 +4,37 @@ function md1_minihash($input){ // Fast, more secure
 	return md5(MAGIC_SALT.$input);
 }
 
+/* URL and URI */
+function prepareURI($item,$delimiter='-',$ignore=false){#ok
+	// replacers
+	$from = explode(',','č,ć,đ,š,ž,Č,Ć,Đ,Š,Ž,ä,ö,ü,Ä,Ö,Ü,ç,ą,ż,â,á,í,î,é,ê,ó,ô,ø');
+	$to	  = explode(',','c,c,d,s,z,C,C,D,S,Z,a,o,u,A,O,U,c,a,z,a,a,i,i,e,e,o,o,o');
+	$item = str_replace($from,$to,$item);
+	// deleters
+	$from = explode(',','“,„, ,+,-,*,:,;,.,•,_,!,",#,$,%,&,\,/,(,),=,?,~,<,>,¤,ß,×,÷,|,[,],{,},@,€,ˇ,^,˘,°,˛,`,˙,´,˝,¨,¸');
+	$from[] = ',';
+	$from[] = "'";
+	$i = 7;
+	while (--$i>1) $from[] = str_repeat($delimiter,$i);
+	if (is_array($ignore)) foreach ($ignore as $char) unset($from[array_search($char,$from)]);
+	$item = str_replace($from,$delimiter,$item);
+	// facelifting
+	$item = strtolower($item);
+	if (substr($item,0,1)==$delimiter) $item = substr($item,1);
+	if (substr($item,-1)==$delimiter) $item = substr($item,0,-1);
+	return $item;
+}
+
+function prepareURL($naziv,$id){#ok
+	// goal: unique item url
+	return prepareURI($naziv)."-".intval($id);
+}
+
+function pseudo_unprepareURI($uri) {
+	$uri=str_replace("-"," ",$uri);
+	return ucfirst($uri);
+}
+
 /* SERVER */
 function phpRedirect($location=''){
 	global $live_site;
