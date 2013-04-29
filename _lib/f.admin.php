@@ -1,19 +1,35 @@
 <?php
-#NOTE tu idu CRUD funkcije za bazu koje ne smiju biti dostupne nigdje drugdje nego u adminu
+/** 
+ * @access only authorized administrators
+ * tu idu CRUD funkcije za bazu koje ne smiju biti dostupne nigdje drugdje nego u adminu
+ */
 
 function navigation(){
-	// $stranice dohvatiti iz TBL stranice i onda foreach napraviti navigaciju ?t=stranice&id=*id_stranice*
-	$stranice=db_dohvatiStranice();
+	$navigation = navigationStranice().navigationOstalo();
+	return wrap($navigation,'ul','menu');
+}
+
+function navigationStranice(){
+	$stranice = db_dohvatiStranice();
 	foreach($stranice as $stranica){
-		$navCont.=wrap('<a href="?t=stranice&id='.$stranica->id.'">'.$stranica->naziv.'</a>','li');
+		$navCont.=wrap('<a href="'.navigationStranice_url($stranica->id).'">'.$stranica->naziv.'</a>','li');
 	}
-	$navCont.=wrap('<div class="menu-right" style="padding:4px 10px;">
-            <span style="float:right;padding:5px 10px;">
-                <a href="{LIVE_SITE}" style="margin-right:10px;" target="_blank"><img src="/images/admin/elementi/view.png" />View site</a>
-                <a href="?logout=1"><img src="/images/admin/elementi/log_out.png" />Log out</a>
-            </span>
-        </div>', 'li');
-	return wrap($navCont,'ul','menu');
+	return $navCont;
+}
+
+function navigationStranice_url($id_stranice){
+	return '?t=stranice&id='.$id_stranice;
+}
+
+function navigationOstalo(){
+	$naviOstalo = '
+	<div class="menu-right" style="padding:4px 10px;">
+    	<span style="float:right;padding:5px 10px;">
+        	<a href="{LIVE_SITE}" style="margin-right:10px;" target="_blank"><img src="/images/admin/elementi/view.png" />View site</a>
+            <a href="?logout=true"><img src="/images/admin/elementi/log_out.png" />Log out</a>
+		</span>
+	</div>';
+	return wrap($naviOstalo,'li');
 }
 
 /* STRANICE */
@@ -22,9 +38,8 @@ function db_dohvatiStranice(){
 	$stranice=db::query_to_objects($sql);
 	return $stranice;
 }
-function db_dohvatiStranicu(){
-	global $get;
-	$sql="SELECT id,naziv FROM ".TBL."stranice WHERE id=".db::sqli($get->id);
+function db_dohvatiStranicu($id_stranice){
+	$sql="SELECT id,naziv FROM ".TBL."stranice WHERE id=".db::sqli($id_stranice);
 	$stranica = db::query_to_object($sql);
 	return $stranica;
 }

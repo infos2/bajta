@@ -25,11 +25,11 @@ $req_fpt = $req_tab.$req_mod.'.php';
 if ($action or !$post->isEmpty) file_exists($sitepath.'spark/logic/'.$req_fpt) ? require 'logic/'.$req_fpt : die('Pogreska logike');
 file_exists($sitepath.'spark/tabs/'.$req_fpt) ? require 'tabs/'.$req_fpt : die('Pogreska sustava');
 
-$PART->live_site = $live_site;
+/* other HTML template chunks*/
 $PART->navigation = navigation();
 $PART->actions = false; #TMP
 $PART->user_name = $user->ime;
-/* other HTML template chunks*/
+$PART->live_site = $live_site;
 
 processTemplate('admin');
 ob_end_flush();

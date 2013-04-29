@@ -275,7 +275,7 @@ p{
             <div class="logo"></div>
         </div>
         <div>
-			<p class="lokacija">Pula, Croatia</p>
+			<p id="lokacija">Pula, Croatia</p>
         	<div class="karta">
         		<!-- TODO Napravit ćemo kartu kao div ne kao iframe -->
             </div>
