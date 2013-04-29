@@ -18,18 +18,13 @@ function navigation(){
 
 /* STRANICE */
 function db_dohvatiStranice(){
-	$sql="SELECT * FROM ".TBL."stranice";
+	$sql="SELECT id,naziv FROM ".TBL."stranice";
 	$stranice=db::query_to_objects($sql);
 	return $stranice;
 }
 function db_dohvatiStranicu(){
 	global $get;
-	// TMP
-	$stranica = new object();
-	$stranica->id = intval($get->id);
-	return $stranica;
-	// OTHERWISE
-	$sql="SELECT * FROM ".TBL."stranice WHERE id=".db::sqli($get->id);
+	$sql="SELECT id,naziv FROM ".TBL."stranice WHERE id=".db::sqli($get->id);
 	$stranica = db::query_to_object($sql);
 	return $stranica;
 }

@@ -54,6 +54,7 @@ DROP TABLE IF EXISTS `racbajhr_db`.`bajta13_stranice` ;
 
 CREATE  TABLE IF NOT EXISTS `racbajhr_db`.`bajta13_stranice` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT ,
+  `naziv` VARCHAR(45) NULL ,
   PRIMARY KEY (`id`) )
 ENGINE = MyISAM;
 
@@ -100,6 +101,19 @@ USE `racbajhr_db`;
 INSERT INTO `racbajhr_db`.`bajta13_jezici` (`ln`, `jezik`) VALUES ('hr', 'Hrvatski');
 INSERT INTO `racbajhr_db`.`bajta13_jezici` (`ln`, `jezik`) VALUES ('en', 'English');
 INSERT INTO `racbajhr_db`.`bajta13_jezici` (`ln`, `jezik`) VALUES ('ru', 'Pусский');
+
+COMMIT;
+
+-- -----------------------------------------------------
+-- Data for table `racbajhr_db`.`bajta13_stranice`
+-- -----------------------------------------------------
+START TRANSACTION;
+USE `racbajhr_db`;
+INSERT INTO `racbajhr_db`.`bajta13_stranice` (`id`, `naziv`) VALUES (1, 'O nama');
+INSERT INTO `racbajhr_db`.`bajta13_stranice` (`id`, `naziv`) VALUES (2, 'Usluge');
+INSERT INTO `racbajhr_db`.`bajta13_stranice` (`id`, `naziv`) VALUES (3, 'Klijenti');
+INSERT INTO `racbajhr_db`.`bajta13_stranice` (`id`, `naziv`) VALUES (4, 'Kontakt');
+INSERT INTO `racbajhr_db`.`bajta13_stranice` (`id`, `naziv`) VALUES (5, 'Linkovi');
 
 COMMIT;
 
