@@ -2,7 +2,72 @@
 /***************************************/
 /*** 7" Tablet *************************/
 /***************************************/
-@media only screen and (max-width: 779px) {
+@media only screen and (max-width: 599px) {
+	.page{
+		padding:170px 48px 25px 36px;
+		margin-bottom:110px;
+		display:inline-block;
+	}
+	.page p{
+		font-size:20px;
+	}
+	.page li{
+		font-size:20px;
+		width:340px;
+	}
+	.logo{
+		visibility:collapse;
+	}
+	.klijenti{
+		margin:0;
+	}
+	#page4 div{
+		margin-left:25px;
+		width:340px;
+	}
+	#holder{
+		width:430px;
+		margin:0 auto;
+		background:#fff url(../images/gradient.png) repeat-x top center;
+		box-shadow:0 0 30px rgba(000,000,000,0.5);
+	}
+	#header ul li{
+		float:left;
+		padding:60px 0 20px 0;
+		text-align:center;
+		width:120px;
+		border-right:3px solid #fff;
+		text-transform:uppercase;
+		color:#fff;
+		font-size:22px;
+		text-shadow:2px 2px 2px #000;
+		cursor:pointer;
+		color:rgba(255,255,255,0.8);
+
+	}
+	#header ul li:first-child{
+		background:#fff url(../images/logo_kontakt.png) no-repeat center center;
+		width:103px;
+		min-height:110px;
+		padding:0 0 0 20px;
+		font-size:0px;
+	}
+	#header ul li:nth-child(5){
+		background:url(../images/menu/linkovi.png) no-repeat top center;
+		width:105px;
+		border-right:0px;
+	}
+	#page5 div{
+		margin-top:50px;
+		width:340px;
+		text-align:center;
+	}
+	#page5 div p{
+		font-size:20px;
+		margin:5px 0;
+	}
+}
+@media only screen and (min-width: 600px) and (max-width: 779px) {
 	.page{
 		padding:170px 48px 25px 36px;
 		margin-bottom:110px;
