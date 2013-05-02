@@ -16,7 +16,11 @@ function navigationStranice(){
 	}
 	return $navCont;
 }
-
+function naslovStranice(){
+	global $get;
+	$stranica=db_dohvatiStranicu($get->id);
+	return wrap($stranica->naziv,'h2');
+}
 function navigationStranice_url($id_stranice){
 	return '?t=stranice&id='.$id_stranice;
 }
