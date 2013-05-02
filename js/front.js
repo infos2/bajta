@@ -24,11 +24,11 @@ $("#header") >$(" ul li").click(function(e) {
 });
 //------------------------------------------------------------------------------------ Helper functions
 function createMenuIcon(){
+	$("#header ul").css('overflow','hidden');
 	vmenu=document.createElement('div');
 	vmenu.id='menu-icon';
 	vmenu.onclick=function(){menuToggle();}
 	$("#header").append(vmenu);
-	$("#header ul").css('overflow','hidden');
 	return vmenu;
 }
 function menuToggle(){
