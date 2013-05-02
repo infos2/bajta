@@ -14,20 +14,16 @@ h3{color:#636363;font-size:16px;text-align:left;}p{font-size:15px;line-height:22
 #page1 p:nth-child(4){text-align:right;}
 
 #page2{background:url(../images/line_sep.png) no-repeat center bottom;}
-.usluga{float:left;min-width:400px;max-width:400px;margin:10px 0;min-height:200px;}
 .usluga:nth-child(even){margin-right:40px;}
 .usluga ul{color:#7a7a7a;list-style:dot;font-size:14px;line-height:22px;}
 
 #page3{padding-bottom:50px;background:url(../images/line_sep.png) no-repeat center bottom;}
-.klijenti p{float:left;max-width:420px;min-width:420px;text-align:left;font-size:18px;line-height:20px;margin:20px 0 0 0;color:#6d6c6c;}
 .klijneti p:nth-child(even){margin-right:20px;}
 
-#page4{padding-bottom:50px;background:url(../images/line_sep.png) no-repeat center bottom;}
 #page4 span{color:#434343;font-size:16px;font-weight:bold;margin-right:10px;min-width:50px;display:inline-block;}
 .lokacija{margin-top:0px;margin-bottom:5px;font-size:18px;}
 #page4 div .logo{padding:0;margin:20px 0 0 0;background:url(../images/logo_kontakt.png) no-repeat left center;height:75px;}
 
-#page5{margin-top:50px;padding-top:300px;padding-bottom:75px;padding-right:54px;margin-bottom:0;background: #efefef url(../images/linkovi_knjiga.png) center top  no-repeat;}
 
 .footer{background:#efefef;margin:0;padding:2px 50px 4px 50px;color:red;}
 .footer p{}
