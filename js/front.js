@@ -14,6 +14,7 @@ $("#header") >$(" ul li").click(function(e) {
 	 }else if($("#menu-icon").is('*') && $(window).width()>599){
 		var vmenu=document.getElementById('menu-icon');
 		document.getElementById('header').removeChild(vmenu);
+		$("#header ul").css('overflow','visible');
 	 }
 	 n=$("body").css("height").replace(/[^-\d\.]/g, '');
 	 if(n!=h && $(window).width()>599){
@@ -27,6 +28,7 @@ function createMenuIcon(){
 	vmenu.id='menu-icon';
 	vmenu.onclick=function(){menuToggle();}
 	$("#header").append(vmenu);
+	$("#header ul").css('overflow','hidden');
 	return vmenu;
 }
 function menuToggle(){
