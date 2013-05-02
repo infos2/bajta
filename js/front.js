@@ -4,12 +4,13 @@ var x=1;
 $("#header") >$(" ul li").click(function(e) {
 	x=$(this).index() + 1;
 	$('body').animate({
-	 scrollTop: $("#page"+x).offset().top
+	 scrollTop: $("#page"+x).offset().top,
+	 complete:menuToggle()
 	 }, 800);
  });
  $(window).resize(function() {
 	 if($(window).width()<599 && !$("#menu-icon").is('*') ){
-		 createMenuIcon()
+		 createMenuIcon();
 	 }else if($("#menu-icon").is('*') && $(window).width()>599){
 		var vmenu=document.getElementById('menu-icon');
 		document.getElementById('header').removeChild(vmenu);
@@ -24,11 +25,15 @@ $("#header") >$(" ul li").click(function(e) {
 function createMenuIcon(){
 	vmenu=document.createElement('div');
 	vmenu.id='menu-icon';
-	vmenu.onclick=function(){alert(1)}
+	vmenu.onclick=function(){menuToggle();}
 	$("#header").append(vmenu);
 	return vmenu;
 }
-
+function menuToggle(){
+	if(!$("#menu-icon").is('*') || $(window).width()>599) return;
+	if($("#header ul").css('overflow')=='hidden')$("#header ul").css('overflow','visible');
+	else $("#header ul").css('overflow','hidden');
+}
 //------------------------------------------------------------------------------------ Database
 
 //------------------------------------------------------------------------------------ Bindings
