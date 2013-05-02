@@ -131,8 +131,23 @@ h2{
 .menu img{
 	vertical-align:middle;
 }
+.menu .menu-right{
+	cursor:auto;
+}
+.menu .menu-right:hover{
+	background:inherit;
+}
 .menu-right a{
 	font-size:11px;
+}
+.menu-right span{
+	float:left;
+	margin-right:10px;
+}
+.menu-right img{
+	float:left;
+	margin-right:2px;
+	height:16px;
 }
 #header{
 	height:105px;

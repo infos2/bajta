@@ -23,13 +23,9 @@ function navigationStranice_url($id_stranice){
 
 function navigationOstalo(){
 	$naviOstalo = '
-	<div class="menu-right" style="padding:4px 10px;">
-    	<span style="float:right;padding:5px 10px;">
-        	<a href="{LIVE_SITE}" style="margin-right:10px;" target="_blank"><img src="/images/admin/elementi/view.png" />View site</a>
-            <a href="?logout=true"><img src="/images/admin/elementi/log_out.png" />Log out</a>
-		</span>
-	</div>';
-	return wrap($naviOstalo,'li');
+        	<span><a href="{LIVE_SITE}" target="_blank"><img src="/images/admin/elementi/view.png" />View site</a></span>
+			<span><a href="?logout=true"><img src="/images/admin/elementi/log_out.png" />Log out</a></span>';
+	return wrap($naviOstalo,'li','menu-right');
 }
 
 /* STRANICE */
