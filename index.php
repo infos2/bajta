@@ -9,6 +9,11 @@
 </head>
 <body>
 <div id="holder">
+	<ul id="langs">
+    	<li class="current">Hr</li>
+    	<li>En</li>
+    	<li>Rus</li>
+    </ul>
 	<div id="header">
     <ul>
         <li>Bajta</li>
