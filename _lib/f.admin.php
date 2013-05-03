@@ -18,7 +18,8 @@ function navigationStranice(){
 }
 function naslovStranice(){
 	global $get;
-	$stranica=db_dohvatiStranicu($get->id);
+	$id=$get->id ? $get->id:1;
+	$stranica=db_dohvatiStranicu($id);
 	return wrap($stranica->naziv,'h2');
 }
 function navigationStranice_url($id_stranice){
