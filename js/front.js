@@ -1,7 +1,7 @@
 //------------------------------------------------------------------------------------ globals
 var h=$("body").css("height").replace(/[^-\d\.]/g, '');
 var x=1;
-$("#header") >$(" ul li").click(function(e) {
+$("#header") >$("#header ul li").click(function(e) {
 	x=$(this).index() + 1;
 	$('body').animate({
 	 scrollTop: $("#page"+x).offset().top,
