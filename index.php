@@ -10,7 +10,7 @@
 <body>
 <div id="holder">
 	<ul id="langs">
-    	<li>Hr</li>
+    	<li class="current">Hr</li>
     	<li>En</li>
     	<li>Rus</li>
     </ul>
