@@ -9,15 +9,15 @@ $("#header") >$(" ul li").click(function(e) {
 	 }, 800);
  });
  $(window).resize(function() {
-	 if($(window).width()<599 && !$("#menu-icon").is('*') ){
+	 if($(window).width()<603 && !$("#menu-icon").is('*') ){
 		 createMenuIcon();
-	 }else if($("#menu-icon").is('*') && $(window).width()>599){
+	 }else if($("#menu-icon").is('*') && $(window).width()>602){
 		var vmenu=document.getElementById('menu-icon');
 		document.getElementById('header').removeChild(vmenu);
 		$("#header ul").css('overflow','visible');
 	 }
 	 n=$("body").css("height").replace(/[^-\d\.]/g, '');
-	 if(n!=h && $(window).width()>599){
+	 if(n!=h && $(window).width()>602){
 		$('body').animate({scrollTop: $("#page"+x).offset().top	}, 0);
 		 h=n;
 	 }
@@ -32,7 +32,7 @@ function createMenuIcon(){
 	return vmenu;
 }
 function menuToggle(){
-	if(!$("#menu-icon").is('*') || $(window).width()>599) return;
+	if(!$("#menu-icon").is('*') || $(window).width()>602) return;
 	if($("#header ul").css('overflow')=='hidden')$("#header ul").css('overflow','visible');
 	else $("#header ul").css('overflow','hidden');
 }
@@ -49,7 +49,7 @@ function bindingsInit(){
 //------------------------------------------------------------------------------------ document ready
 $(document).ready(function(){
 	bindingsInit();
-	if($(window).width()<599 && !$("#menu-icon").is('*')){
+	if($(window).width()<603 && !$("#menu-icon").is('*')){
 		createMenuIcon();
 	}
 });
