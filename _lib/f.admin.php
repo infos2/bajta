@@ -1,7 +1,7 @@
 <?php
 /** 
- * @access only authorized administrators
- * tu idu CRUD funkcije za bazu koje ne smiju biti dostupne nigdje drugdje nego u adminu
+ * @access satisfy all
+ * tu idu funkcije koje su dostupne samo na frontu
  */
 
 function navigation(){
@@ -17,28 +17,13 @@ function navigationStranice(){
 	return $navCont;
 }
 
-function nazivStranice($id_stranice){
-	$stranica = db_dohvatiStranicu($id_stranice);
-	return $stranica->naziv;
-}
-
-function navigationStranice_url($id_stranice){
-	return '?t=stranice&id='.$id_stranice;
-}
-
-function navigationOstalo(){
-	$naviOstalo = '
-        	<span><a href="{LIVE_SITE}" target="_blank"><img src="/images/admin/elementi/view.png" />View site</a></span>
-			<span><a href="?logout=true"><img src="/images/admin/elementi/log_out.png" />Log out</a></span>';
-	return wrap($naviOstalo,'li','menu-right');
-}
-
 /* STRANICE */
 function db_dohvatiStranice(){
 	$sql="SELECT id,naziv FROM ".TBL."stranice";
 	$stranice=db::query_to_objects($sql);
 	return $stranice;
 }
+
 function db_dohvatiStranicu($id_stranice){
 	$sql="SELECT id,naziv FROM ".TBL."stranice WHERE id=".db::sqli($id_stranice);
 	$stranica = db::query_to_object($sql);
@@ -55,19 +40,3 @@ function postojiPrijevod($id_stranice,$ln){
 	$stranica = db_dohvatiPrijevod($id_stranice,$ln);
 	return $stranica!==false;
 }
-
-function db_insertPrijevod($prijevod){
-	$sql="
-		INSERT INTO ".TBL."sadrzaj(id_stranice,ln,naslov,sadrzaj,url) 
-		VALUES('".db::sqli($prijevod->id_stranice)."','".db::sqli($prijevod->ln)."','".db::sqli($prijevod->naslov)."','".db::sqli($prijevod->sadrzaj)."','".db::sqli($prijevod->url)."')";
-	db::query($sql);
-}
-
-function db_updatePrijevod($prijevod){
-	$sql="
-		UPDATE ".TBL."sadrzaj 
-		SET naslov='".db::sqli($prijevod->naslov)."', sadrzaj='".db::sqli($prijevod->sadrzaj)."', url='".db::sqli($prijevod->url)."' 
-		WHERE id_stranice=".db::sqli($prijevod->id_stranice)." AND ln='".db::sqli($prijevod->ln)."'";
-	db::query($sql);
-}
-
