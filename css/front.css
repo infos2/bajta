@@ -7,9 +7,10 @@ h3{color:#636363;font-size:16px;text-align:left;}p{font-size:15px;line-height:22
 #menu-icon{position:absolute;top:20px;right:30px;background:url(../images/vmenu.png) no-repeat center center;height:30px;width:30px;cursor:pointer;}
 #holder{position:relative;}
 
-#langs{ list-style:none;position:absolute;top:120px;right:25px;}
-#langs li{float:left;min-width:35px;text-align:center;border-right:1px solid #666;}
-#langs li:last-child{border-right:0;}
+#langs{ list-style:none;position:absolute;top:120px;right:25px;color:#fff;font-size:14px;}
+#langs li{float:left;min-width:35px;text-align:center;border-right:1px solid #fff;background:#666;padding:7px;height:20px;}
+#langs li:first-child{border-radius:0 0 0 5px;}
+#langs li:last-child{border-right:0;border-radius:0 0 5px 0;}
 #langs .current{font-weight:bold;}
 
 #header{margin:0 0 100px 0;background:#fff url(../images/line_sep.png) no-repeat bottom center;padding:0;height:115px;position:fixed;}
