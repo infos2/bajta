@@ -10,9 +10,9 @@
 <body>
 <div id="holder">
 	<ul id="langs">
-    	<li class="current">Hr</li>
-    	<li>En</li>
-    	<li>Rus</li>
+    	<li class="current"><a href="">HR</a></li>
+    	<li><a href="">EN</a></li>
+    	<li><a href="">RU</a></li>
     </ul>
 	<div id="header">
     <ul>

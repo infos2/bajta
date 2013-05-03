@@ -27,8 +27,6 @@ file_exists($sitepath.'spark/tabs/'.$req_fpt) ? require 'tabs/'.$req_fpt : die('
 
 /* other HTML template chunks*/
 $PART->navigation = navigation();
-$PART->stranica = naslovStranice();
-$PART->user_name = $user->ime;
 $PART->live_site = $live_site;
 
 processTemplate('admin');

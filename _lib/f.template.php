@@ -39,9 +39,13 @@ function prepareErrorHTML($errors){
 	return '<p class="error">'.implode(', ',$errors).'</p>';
 }
 
-/* VIEW */
-function view_userName(){
-	#TODO Hello, name HTML chunk
+/* VIEW HELPERS */
+function view_setTitle($title){
+	global $PART;
+	$PART->title = $title.' :: '.ucfirst(D_PROJECT_NAME).' admin';
 }
 
-/* VIEW HELPERS */
+function view_setH2($string){
+	global $PART;
+	$PART->h2 = wrap($string,'h2');
+}

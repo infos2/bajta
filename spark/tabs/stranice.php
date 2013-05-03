@@ -18,6 +18,10 @@ function createStranicaTabs(){
 	global $get;
 	$id_stranice = isset($get->id) ? intval($get->id) : 1;
 	$stranica = db_dohvatiStranicu($id_stranice);
+	
+	view_setTitle($stranica->naziv.' - Uredi stranicu');
+	view_setH2($stranica->naziv);
+	
 	$langs=db_getLanguages();
 	foreach($langs as $lang){
 		$prijevod = db_dohvatiPrijevod($stranica->id,$lang->ln);
@@ -38,3 +42,5 @@ function createStranicaTabs(){
 	$tabsNaviUl = wrap($tabsNavi,'ul');
 	return $tabsNaviUl.$tabsCont;	
 }
+
+/* HELPER */

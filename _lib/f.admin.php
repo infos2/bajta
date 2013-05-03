@@ -16,12 +16,12 @@ function navigationStranice(){
 	}
 	return $navCont;
 }
-function naslovStranice(){
-	global $get;
-	$id=$get->id ? $get->id:1;
-	$stranica=db_dohvatiStranicu($id);
-	return wrap($stranica->naziv,'h2');
+
+function nazivStranice($id_stranice){
+	$stranica = db_dohvatiStranicu($id_stranice);
+	return $stranica->naziv;
 }
+
 function navigationStranice_url($id_stranice){
 	return '?t=stranice&id='.$id_stranice;
 }
