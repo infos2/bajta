@@ -4,6 +4,8 @@ README.txt
 demos/
 extras/documentation
 
+.gitignore
 /.*
 /*.db
 /index2.php
+/3RR0R.log
