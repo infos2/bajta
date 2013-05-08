@@ -11,9 +11,10 @@ function navigation(){
 
 function navigationStranice(){
 	global $get;
+	$id=isset($get->id)? $get->id:1;
 	$stranice = db_dohvatiStranice();
 	foreach($stranice as $stranica){
-		$selected=$get->id==$stranica->id ?'selected':false;
+		$selected= $id==$stranica->id ?'selected':false;
 		$navCont.=wrap('<a href="'.navigationStranice_url($stranica->id).'">'.$stranica->naziv.'</a>','li',$selected);
 	}
 	return $navCont;

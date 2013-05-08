@@ -15,7 +15,9 @@ function setLn(){
 }
 
 function getLn(){
+	global $get;
 	if (THIS_IS_ADMIN===true) return DEFAULT_LANG;
+	if(isset($get->lang))$_SESSION['ln']=$get->lang;
 	return (isset($_SESSION['ln'])) ? $_SESSION['ln'] : DEFAULT_LANG;
 }
 
