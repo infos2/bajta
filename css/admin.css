@@ -8,7 +8,7 @@ h2{color:#6c6c6e;font-family:sans-serif;font-size:20px;margin:0;padding:5px 0 0 
 #logo-holder{text-align:center;padding:15px 0}
 .menu{background:#5f5f5f;border-radius:10px 5px 0 0;list-style:none;margin:0;padding:0;color:#fff;min-height:36px;font-size:13px}
 .menu a{font-size:inherit;color:inherit}
-.menu li{background:#5f5f5f;float:left;padding:10px 25px;margin:0;border-right:2px solid #d8d8d8;cursor:pointer;position:relative;border-bottom:0;-webkit-transition:all .3s ease;-moz-transition:all .3s ease;-o-transition:all .3s ease;transition:all .3s ease}
+.menu li{background:#5f5f5f;float:left;padding:10px 25px;margin:0;border-right:2px solid #d8d8d8;position:relative;border-bottom:0;-webkit-transition:all .3s ease;-moz-transition:all .3s ease;-o-transition:all .3s ease;transition:all .3s ease}
 .menu li:first-child{border-radius:5px 0 0 0}
 .menu li:hover{background:#4c4c4c;-webkit-transition:all .3s ease;-moz-transition:all .3s ease;-o-transition:all .3s ease;transition:all .3s ease}
 .menu li:hover .drop-menu{height:85px;-webkit-transition:all .5s ease;-moz-transition:all .5s ease;-o-transition:all .5s ease;transition:all .5s ease}
@@ -19,11 +19,10 @@ h2{color:#6c6c6e;font-family:sans-serif;font-size:20px;margin:0;padding:5px 0 0 
 .menu ul li:hover{background:#4c4c4c;-webkit-transition:all .3s ease;-moz-transition:all .3s ease;-o-transition:all .3s ease;transition:all .3s ease}
 .menu .selected{background:#4c4c4c}
 .menu img{vertical-align:middle}
-.menu .menu-right{cursor:auto}
+.menu .menu-right{cursor:auto;float:right;border:0;border-radius:0 10px;}
 .menu .menu-right:hover{background:inherit}
-.menu-right a{font-size:11px}
-.menu-right span{float:left;margin-right:10px}
-.menu-right img{float:left;margin-right:2px;height:16px}
+.menu-right a{font-size:11px;float:left;margin-right:15px;} 
+.menu-right img{float:left;margin-right:4px;height:16px}
 #header{height:105px;padding:20px 10px 15px 15px;background-color:rgba(000,000,000,0.4);background-image:url(../images/admin/elementi/dekor.png);background-position:right;background-repeat:no-repeat;border-radius:0 0 5px 5px}
 #header h2{color:#fff;padding:0;font-family:arial}
 #header p{width:550px;text-align:justify;color:#fff;margin:5px 0}

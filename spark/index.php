@@ -26,6 +26,7 @@ if ($action or !$post->isEmpty) file_exists($sitepath.'spark/logic/'.$req_fpt) ?
 file_exists($sitepath.'spark/tabs/'.$req_fpt) ? require 'tabs/'.$req_fpt : die('Pogreska sustava');
 
 /* other HTML template chunks*/
+
 $PART->navigation = navigation();
 $PART->live_site = $live_site;
 

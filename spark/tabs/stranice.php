@@ -8,7 +8,7 @@ function HTML(){
 		'.createStranicaTabs().'
     </div>
         <p>
-            <button class="btn btn-primary" type="submit">Spremi</button>
+            <button class="btn btn-primary" type="submit" onclick="edited=0;">Spremi</button>
             <button class="btn" type="button">Odustani</button>
         </p>
 	</form>';
