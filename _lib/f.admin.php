@@ -25,6 +25,8 @@ function nazivStranice($id_stranice){
 	return $stranica->naziv;
 }
 
+
+/* STRANICE */
 function navigationStranice_url($id_stranice){
 	return '?t=stranice&id='.$id_stranice;
 }
@@ -34,18 +36,6 @@ function navigationOstalo(){
         	<span><a href="{LIVE_SITE}" target="_blank"><img src="/images/admin/elementi/view.png" />View site</a></span>
 			<span><a href="?logout=true"><img src="/images/admin/elementi/log_out.png" />Log out</a></span>';
 	return wrap($naviOstalo,'li','menu-right');
-}
-
-/* STRANICE */
-function navigationOstalo(){
-	return '
-		<li class="menu-right" >
-			<a href="" target="_new"><img src="../images/view.png" /> View site </a>
-			<a href="?logout=1"><img src="../images/log_out.png" /> Log out</a>
-        </li>';
-}
-function navigationStranice_url($stranicaId){
-	return '?t=stranice&id='.$stranicaId;
 }
 function db_dohvatiStranice(){
 	$sql="SELECT id,naziv FROM ".TBL."stranice";
@@ -77,3 +67,4 @@ function db_updatePrijevod($prijevod){
 function db_insertPrijevod($prijevod){
 	$sql="INSERT INTO ".TBL."sadrzaj(naslov,ln,sadrzaj,url,id_stranice) VALUES('".db::sqli($prijevod->naslov)."','".db::sqli($prijevod->ln)."','".htmlspecialchars($prijevod->sadrzaj)."','".db::sqli(prepareURI($prijevod->url,$delimiter='-'))."',".db::sqli($prijevod->id_stranice).")";
 	return db::query($sql);
+}
