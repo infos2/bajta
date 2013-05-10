@@ -4,7 +4,7 @@ function languages(){
 	static $languages;
 	if (!empty($languages)) return $languages;
 	// else build from DB
-	$languages = db_getLanguages('published=1');
+	$languages = db_getLanguages();
 	return $languages;
 }
 
@@ -36,8 +36,8 @@ function prepJezikToLn($jezik){
 }
 
 /* HELPER */
-function db_getLanguages($where='1'){
-	$sql="SELECT ln,jezik,published FROM ".TBL."jezici WHERE $where";
+function db_getLanguages(){
+	$sql="SELECT ln,jezik,published FROM ".TBL."jezici WHERE 1";
 	$jezici = db::query_to_objects($sql);
 	return $jezici;
 }

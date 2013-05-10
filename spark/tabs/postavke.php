@@ -23,7 +23,7 @@ function getLanguages(){
 	view_setTitle('Uređivanje postavki stranica');
 	view_setH2('Postavke');
 	
-	$langs=db_getLanguages();
+	$langs = languages();
 	foreach($langs as $lang){
 		$span=wrap($lang->jezik,'span','jezici');
 		

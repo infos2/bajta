@@ -4,7 +4,7 @@ else execute();
 
 function execute(){
 	global $post;
-	$langs=db_getLanguages();
+	$langs = languages();
 	foreach($langs as $lang){
 		if($lang->ln=='hr')continue;
 		$jezik = new object();

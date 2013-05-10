@@ -29,6 +29,7 @@ function languagesOptions(){
 	global $live_site;
 	$langs = languages();
 	foreach($langs as $ln){
+		if ($ln->published==0) continue;
 		$current = getLn()==$ln->ln ? 'current' : '';
 		$langCont.= wrap('<a href="'.$live_site.$ln->ln.'/">'.$ln->ln.'</a>','li',$current);
 	}
