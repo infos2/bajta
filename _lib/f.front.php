@@ -37,7 +37,7 @@ function languagesOptions(){
 
 function navigation(){
 	$navigation = navigationStranice();
-	return wrap($navigation,'ul','menu');
+	return wrap($navigation,'ul','menu','menu');
 }
 
 function navigationStranice(){

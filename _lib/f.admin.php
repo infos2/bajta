@@ -70,3 +70,14 @@ function db_insertPrijevod($prijevod){
 	$sql="INSERT INTO ".TBL."sadrzaj(naslov,ln,sadrzaj,url,id_stranice) VALUES('".db::sqli($prijevod->naslov)."','".db::sqli($prijevod->ln)."','".htmlspecialchars($prijevod->sadrzaj)."','".db::sqli(prepareURI($prijevod->url,$delimiter='-'))."',".db::sqli($prijevod->id_stranice).")";
 	return db::query($sql);
 }
+
+/* JEZICI */
+function db_insertLang(){
+	global $post;
+	$sql="INSERT INTO ".TBL."jezici(jezik,ln,published) VALUES('".db::sqli($post->jezik)."','".db::sqli(prepJezikToLn($post->jezik))."',0)";
+	return db::query($sql);
+}
+function db_updateJezik($jezik){
+	$sql="UPDATE ".TBL."jezici SET published=".$jezik->published." WHERE ln='".$jezik->ln."'";
+	return db::query($sql);
+}

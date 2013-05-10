@@ -4,7 +4,7 @@ function languages(){
 	static $languages;
 	if (!empty($languages)) return $languages;
 	// else build from DB
-	$languages = db_getLanguages();
+	$languages = db_getLanguages('published=1');
 	return $languages;
 }
 
@@ -36,17 +36,8 @@ function prepJezikToLn($jezik){
 }
 
 /* HELPER */
-function db_getLanguages(){
-	$sql="SELECT ln,jezik,published FROM ".TBL."jezici WHERE 1";
+function db_getLanguages($where='1'){
+	$sql="SELECT ln,jezik,published FROM ".TBL."jezici WHERE $where";
 	$jezici = db::query_to_objects($sql);
 	return $jezici;
-}
-function db_insertLang(){
-	global $post;
-	$sql="INSERT INTO ".TBL."jezici(jezik,ln,published) VALUES('".db::sqli($post->jezik)."','".db::sqli(prepJezikToLn($post->jezik))."',0)";
-	return db::query($sql);
-}
-function db_updateJezik($jezik){
-	$sql="UPDATE ".TBL."jezici SET published=".$jezik->published." WHERE ln='".$jezik->ln."'";
-	return db::query($sql);
 }

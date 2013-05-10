@@ -16,6 +16,7 @@ if(!ob_start("ob_gzhandler")) ob_start('compress');
 $PART = new TemplateParts();
 
 /* other HTML template chunks */
+$PART->title=TITLE;
 $PART->languages_menu = languagesMenu();
 $PART->navigation = navigation();
 $PART->pages = stranice_HTML();
