@@ -22,7 +22,7 @@ function createStranicaTabs(){
 	view_setTitle($stranica->naziv.' - Uredi stranicu');
 	view_setH2($stranica->naziv);
 	
-	$langs=db_getLanguages();
+	$langs = languages();
 	foreach($langs as $lang){
 		$prijevod = db_dohvatiPrijevod($stranica->id,$lang->ln);
 		$tabsNavi.= wrap('<a href="#tabs-'.++$i.'">'.$lang->jezik.'</a>','li');
