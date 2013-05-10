@@ -1,24 +1,35 @@
 <?php
 /* LANGUAGE */
-function languages($ln=false){
+function languages(){
 	static $languages;
 	if (!empty($languages)) return $languages;
 	// else build from DB
-	$languages = array();
-	$lno = db_getLanguages();
-	foreach ($lno as $lang) $languages[$lang->ln] = $lang->jezik;
+	$languages = db_getLanguages();
 	return $languages;
 }
 
+function lns(){
+	$languages = languages();
+	foreach ($languages as $language) $lns[] = $language->ln;
+	return $lns;
+}
+
 function setLn(){
-	$_SESSION['ln'] = getLn();
+	global $xurl;
+	if (!empty($xurl->p1) and is_valid_ln($xurl->p1)) $_SESSION['ln'] = $xurl->p1;
+	elseif(empty($_SESSION['ln'])) {
+		$_SESSION['ln'] = DEFAULT_LANG;
+		phpRedirect(DEFAULT_LANG.'/');
+	}
 }
 
 function getLn(){
-	global $get;
-	if (THIS_IS_ADMIN===true) return DEFAULT_LANG;
-	if(isset($get->lang))$_SESSION['ln']=$get->lang;
-	return (isset($_SESSION['ln'])) ? $_SESSION['ln'] : DEFAULT_LANG;
+	return $_SESSION['ln'];
+}
+
+function is_valid_ln($ln){
+	$lns = lns();
+	return in_array($ln,$lns);
 }
 function prepJezikToLn($jezik){
 	return strtolower(substr($jezik,0,2));

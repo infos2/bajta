@@ -3,7 +3,7 @@ execute();
 
 function execute(){
 	global $get,$post;
-	$langs=db_getLanguages();
+	$langs = languages();
 	foreach($langs as $lang){
 		$prijevod = new object();
 		$prijevod->id_stranice = intval($get->id);
