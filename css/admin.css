@@ -88,3 +88,6 @@ h2{color:#6c6c6e;font-family:sans-serif;font-size:20px;margin:0;padding:5px 0 0 
 .btn:hover,.btn:focus,.btn.active,.btn.disabled,.btn[disabled]{color:#333;background-color:#e6e6e6}
 .btn-primary:hover,.btn-primary:focus,.btn-primary:active,.btn-primary.active,.btn-primary.disabled,.btn-primary[disabled]{color:#fff;background-color:#04c}
 .btn:active{border-style:inset;border-color:#000}
+#heading-jezici{font-weight:bold;}
+.jezici{min-width:100px;display:inline-block;}
+.njezik{padding:4px 0;margin-right:10px;}

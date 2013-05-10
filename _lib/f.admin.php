@@ -17,6 +17,8 @@ function navigationStranice(){
 		$selected= $id==$stranica->id ?'selected':false;
 		$navCont.=wrap('<a href="'.navigationStranice_url($stranica->id).'">'.$stranica->naziv.'</a>','li',$selected);
 	}
+	$selected= $id==false ?'selected':false;
+	$navCont.=wrap('<a href="?t=postavke">Postavke</a>','li',$selected);
 	return $navCont;
 }
 
