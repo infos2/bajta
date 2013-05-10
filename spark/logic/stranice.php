@@ -16,5 +16,6 @@ function execute(){
 		$prijevod->sadrzaj = $post->$sadrzaj_attrName;
 		postojiPrijevod($prijevod->id_stranice,$prijevod->ln) ? db_updatePrijevod($prijevod) : db_insertPrijevod($prijevod);
 	}
+	refresh();
 }
 

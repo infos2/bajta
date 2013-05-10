@@ -16,10 +16,13 @@ function lns(){
 
 function setLn(){
 	global $xurl;
-	if (!empty($xurl->p1) and is_valid_ln($xurl->p1)) $_SESSION['ln'] = $xurl->p1;
-	elseif(empty($_SESSION['ln'])) {
-		$_SESSION['ln'] = DEFAULT_LANG;
-		phpRedirect(DEFAULT_LANG.'/');
+	if (!empty($xurl->p1)){
+		if (getLn()==$xurl->p1) return;
+		else $_SESSION['ln'] = $xurl->p1;
+	}
+	else {
+		if (empty($_SESSION['ln'])) $_SESSION['ln'] = DEFAULT_LANG;
+		phpRedirect(getLn().'/');
 	}
 }
 

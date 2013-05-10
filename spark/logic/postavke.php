@@ -14,4 +14,5 @@ function execute(){
 		$jezik->published = $post->$naslov_attrName=='1' ? 1:0;
 		db_updateJezik($jezik);
 	}
+	refresh();
 }
