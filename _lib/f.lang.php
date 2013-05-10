@@ -15,9 +15,12 @@ function lns(){
 }
 
 function setLn(){
-	global $get;
-	if (!empty($get->ln) and is_valid_ln($get->ln)) $_SESSION['ln'] = $get->ln;
-	elseif(empty($_SESSION['ln'])) $_SESSION['ln'] = DEFAULT_LANG;
+	global $xurl;
+	if (!empty($xurl->p1) and is_valid_ln($xurl->p1)) $_SESSION['ln'] = $xurl->p1;
+	elseif(empty($_SESSION['ln'])) {
+		$_SESSION['ln'] = DEFAULT_LANG;
+		phpRedirect(DEFAULT_LANG.'/');
+	}
 }
 
 function getLn(){

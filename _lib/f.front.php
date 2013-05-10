@@ -26,10 +26,11 @@ function languagesMenu(){
 }
 
 function languagesOptions(){
+	global $live_site;
 	$langs = languages();
 	foreach($langs as $ln){
 		$current = getLn()==$ln->ln ? 'current' : '';
-		$langCont.=wrap('<a href="?lang='.$ln->ln.'">'.$ln->ln.'</a>','li',$current);
+		$langCont.= wrap('<a href="'.$live_site.$ln->ln.'/">'.$ln->ln.'</a>','li',$current);
 	}
 	return $langCont;
 }
@@ -51,4 +52,17 @@ function db_dohvatiStranice(){
 	$sql="SELECT DISTINCT id_stranice,naslov,sadrzaj  FROM ".TBL."sadrzaj WHERE ln='".db::sqli(getLn())."' ORDER BY id_stranice ASC";
 	$stranice = db::query_to_objects($sql);
 	return $stranice;
+}
+
+/* URL PARSING */
+function parseURL($url){#ok
+	if (strrpos($url,"/")==(strlen($url)-1)) $url = substr($url,0,-1);
+	return explode("/",$url);
+}
+
+function configureUrl($urlArray){#ok
+	global $get;
+	$xurl = new object;
+	if ($urlArray[0]!=NULL) $xurl->p1 = $urlArray[0];
+	return $xurl;
 }

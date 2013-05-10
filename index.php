@@ -5,6 +5,9 @@ require '_lib/f.front.php';
 require '_lib/f.template.php';  // if you want Template $PARTs
 require '_lib/f.lang.php';		// if you want Languages
 
+/* URL */
+$xurl = configureUrl(parseURL($get->url)); 
+
 /* LANG LOGIC */
 setLn();
 
