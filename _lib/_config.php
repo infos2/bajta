@@ -43,7 +43,7 @@ require 'f.user.php';
 /* GLOBALS */
 $protocol = !empty($_SERVER['HTTPS']) ? 'https' : 'http';
 $live_site = $protocol.'://'.$_SERVER['HTTP_HOST'].'/';
-$sitepath = $_SERVER['DOCUMENT_ROOT'];
+$sitepath = $_SERVER['DOCUMENT_ROOT'].(substr($_SERVER['DOCUMENT_ROOT'],-1)=='/' ? '' : '/');
 forceWWW();
 
 $get = (object)$_GET; $get->isEmpty = count(get_object_vars($get))>0 ? false : true;
