@@ -9,7 +9,10 @@ function stranice_HTML(){
 	}
 	return $html;
 }
-
+function setCopyright(){
+	if (date('Y')>2013)return '2013 - '.date('Y');
+	else return '2013';
+}
 function googleMapa(){
 	return '
 		<div>

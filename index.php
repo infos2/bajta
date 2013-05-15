@@ -17,6 +17,7 @@ $PART = new TemplateParts();
 
 /* other HTML template chunks */
 $PART->title=TITLE;
+$PART->year=setCopyright();
 $PART->languages_menu = languagesMenu();
 $PART->navigation = navigation();
 $PART->pages = stranice_HTML();
