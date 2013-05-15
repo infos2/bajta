@@ -16,13 +16,18 @@ function lns(){
 
 function setLn(){
 	global $xurl;
-	if (!empty($xurl->p1)){
+	if (!empty($xurl->p1) and is_valid_ln($xurl->p1)){
 		if (getLn()==$xurl->p1) return;
 		else $_SESSION['ln'] = $xurl->p1;
 	}
-	else {
-		if (empty($_SESSION['ln'])) $_SESSION['ln'] = DEFAULT_LANG;
-		phpRedirect(getLn().'/');
+	elseif (empty($_SESSION['ln'])) {
+		$_SESSION['ln'] = DEFAULT_LANG;
+		$url = getLn().'/';
+		phpRedirect($url);
+	}
+	else { // not valid p1 as ln, reset session->ln and redirect bad url
+		unset($_SESSION['ln']);
+		refresh();
 	}
 }
 

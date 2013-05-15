@@ -8,7 +8,9 @@ class TemplateParts {
 function processTemplate($template){
 	global $sitepath,$PART;
 	$PART->error = prepareErrorHTML($PART->error);
-	$template = file_get_contents($sitepath.'html/'.$template.'.html');
+	$filepath = $sitepath.'html/'.$template.'.html';
+	if (!file_exists($filepath)) die("Can't load teplate file");
+	$template = file_get_contents($filepath);
 	foreach ((array)$PART as $attribute=>$html) {
 		$placeholder = '{'.strtoupper($attribute).'}';
 		$template = str_replace($placeholder,$html,$template);
