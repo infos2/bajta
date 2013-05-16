@@ -359,10 +359,11 @@
 	}
 	.klijenti p{float:left;max-width:420px;min-width:420px;text-align:left;font-size:18px;line-height:20px;margin:20px 0 0 0;color:#6d6c6c;}
 
+	#page4{width:860px;}
 	#page4 .divs{float:left;min-width:400px;}
-#page4 #info{margin:0 0 0 25px;padding-top:10px;}
-#page4 div .karta{float:none;border:1px solid #c6c6c6;padding:5px 5px 5px 5px;min-width:396px;margin:0;}
-#page4{padding-bottom:50px;background:url(../images/line_sep.png) no-repeat center bottom;}
+	#page4 #info{margin:0 0 0 25px;padding-top:10px;}
+	#page4 div .karta{float:none;border:1px solid #c6c6c6;padding:5px 5px 5px 5px;min-width:396px;margin:0;}
+	#page4{padding-bottom:50px;background:url(../images/line_sep.png) no-repeat center bottom;}
 
 	#page5{margin-top:50px;padding-top:225px;padding-bottom:200px;padding-right:54px;margin-bottom:0;background: #efefef url(../images/linkovi_knjiga.png) center top  no-repeat;}
 	#page5 .linkovi-left{
