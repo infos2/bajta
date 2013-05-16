@@ -22,7 +22,6 @@ $("#header") >$("#header ul li").click(function(e) {
 		 h=n;
 	 }
 });
-//------------------------------------------------------------------------------------ Helper functions
 function createMenuIcon(){
 	$("#header ul").css('overflow','hidden');
 	vmenu=document.createElement('div');
@@ -36,6 +35,30 @@ function menuToggle(){
 	if($("#header ul").css('overflow')=='hidden')$("#header ul").css('overflow','visible');
 	else $("#header ul").css('overflow','hidden');
 }
+function initialize() {
+	var myLatlng = new google.maps.LatLng(44.8607040,13.83287860);
+	var mapOptions = {
+	  zoom: 12,
+	  center: myLatlng,
+	  panControl: false,
+	  zoomControl: true,
+	  mapTypeControl: false,
+	  scaleControl: false,
+	  streetViewControl: false,
+	  overviewMapControl: false,
+	  mapTypeId: google.maps.MapTypeId.ROADMAP,
+	}
+	var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+	var marker = new google.maps.Marker({
+	    position: myLatlng,
+	    title:"Bajta d.o.o.!"
+	});
+
+	// To add the marker to the map, call setMap();
+	marker.setMap(map);			
+}
+
 //------------------------------------------------------------------------------------ Database
 
 //------------------------------------------------------------------------------------ Bindings
@@ -49,6 +72,7 @@ function bindingsInit(){
 //------------------------------------------------------------------------------------ document ready
 $(document).ready(function(){
 	bindingsInit();
+	initialize();
 	if($(window).width()<603 && !$("#menu-icon").is('*')){
 		createMenuIcon();
 	}

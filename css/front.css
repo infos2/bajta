@@ -32,11 +32,11 @@ a:hover{color:#5e5e5e;}
 #page3{padding-bottom:50px;background:url(../images/line_sep.png) no-repeat center bottom;}
 .klijneti p:nth-child(even){margin-right:20px;}
 
-#page4 span{color:#434343;font-size:16px;font-weight:bold;margin-right:10px;min-width:50px;display:inline-block;}
+#page4 span:not(.karta){color:#434343;font-size:16px;font-weight:bold;margin-right:10px;min-width:50px;display:inline-block;}
 .lokacija{margin-top:0px;margin-bottom:5px;font-size:18px;}
 #page4 div .logo{padding:0;margin:20px 0 0 0;background:url(../images/logo_kontakt.png) no-repeat left center;height:75px;}
-#page4 #email{font-weight:normal;}
-
+#page4 #email{font-weight:normal;text-decoration:underline;}
+#page4 .karta{height:310px;}
 .footer{background:#efefef;margin:0;padding:2px 50px 4px 50px;color:red;}
 .footer p{}
 .powered{float:right;}

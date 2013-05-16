@@ -15,10 +15,9 @@ function setCopyright(){
 }
 function googleMapa(){
 	return '
-		<div>
+		<div class="divs">
 			<p id="lokacija">Pula, Croatia</p>
-        	<div class="karta">
-        		<!-- TODO Napravit ćemo kartu kao div ne kao iframe -->
+        	<div class="karta" id="map-canvas">
             </div>
         </div>';
 }
